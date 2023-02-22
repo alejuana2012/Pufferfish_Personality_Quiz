@@ -310,7 +310,7 @@ questions_list = [
         d. milk
         e. tea
         f. energy drink''',
-        '''Question 8: Someone cuts in front of you at the grocery store, how do you react?
+        '''Question 7: Someone cuts in front of you at the grocery store, how do you react?
         a. calmly tell them that you were in line (it was probably a mistake)
         b. complain to a worker and make a scene
         c. sternly tell them to go to the back of the line
