@@ -253,18 +253,18 @@ Traits of this puffer are:
     -organized
     -analytical
     -stubborn
-This fugu is the talk of the town. They won't tell you how much their outfit cost, but you will always find them making impecable style choices.  
+This fugu is the talk of the town. They won't tell you how much their outfit cost, but you will always find them making impeccable style choices.  
 Beautiful and powerful describes this fish! They have important goals and will do everything in their power to reach those goals.
-Their only weakness is that they cannot be persuaded. They will always stick to their moral code and luck tends to be on their side.''',
+Their only weakness is that they cannot be persuaded. They will always stick to their moral code and luck tends to be on their side.''', # Fixed spelling typo "impeccable"
 '''**You are the REBEL PUFFERFISH!** 
 Traits of this puffer are:
     -passionate
     -impulsive
     -independent
 This fugu is the kid your parents told you to watch out for. They march to the beat of their own drum and lead others.
-Firey describes this fish! They have a tough exterior but when they develop bonds, they are unbreakable.
+Fiery describes this fish! They have a tough exterior but when they develop bonds, they are unbreakable.
 Their only weakness is that they are easily swayed by emotions. If you pull at their heartstrings you will have them eating out of the palm of your hand'''
-]
+] # Fixed spelling typo "fiery"
 
 #Each one of the questions are stored in this list
 questions_list = [
@@ -331,7 +331,7 @@ questions_list = [
         c. black
         d. purple
         e. blonde
-        f. green''',
+        f. green''', # I think all natural hair colors should be options. I wanted to choose red :(
         '''Question 10: Which one of these adjectives speaks to you?
         a. valiant
         b. purple
@@ -360,7 +360,7 @@ def run():
         print(question)
         #The while loop is here to catch any invalid inputs so that the question is not skipped
         while True:
-            response = input()
+            response = input().lower() # This will allow capital and lowercase letters to be accepted
             if response == 'a':
                 a_counter += 1
                 break
@@ -388,7 +388,7 @@ def run():
     #Using the numpy argmax to find which value in the list is the highest, then returning its index. That index indicates the personality type
     personality = numpy.argmax(total_count)
     #Uses the name given at the start to create a header for the certificate file
-    certificate_header = "-----------" + your_name + "\'s Pufferfish Personality Quiz Results-----------"
+    certificate_header = "-----------" + your_name + "'s Pufferfish Personality Quiz Results-----------" # You don't need the backslash for an apostrophe if you use quotation marks around the string
     #Creates a variable 'result' which is a list that includes the header, the corresponding pufferfish ASCII art, and the personality description.
     result =  [certificate_header, str(puffers[int(personality)]), str(puffer_bios[int(personality)])]
     #Joins the elements in 'result' with a newline separating them. This helps the ASCII art to stay intact and keeps the certificate pretty.
@@ -403,4 +403,4 @@ with open("certificate.txt", "w") as f:
     f.write(run())
 
 #This is a message telling the user to go to the path where the quiz is saved so that they can find and open up their certificate.
-print("THE RESULTS ARE IN! Please check the following directory for \'certificate.txt\' --->" + str(path_to_project))
+print("THE RESULTS ARE IN! Please check the following directory for 'certificate.txt' --->" + str(path_to_project)) # Again, don't need the backslash for apostrophes
