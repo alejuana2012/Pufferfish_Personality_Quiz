@@ -2,7 +2,7 @@ from pathlib import Path
 import numpy
 
 #Paths to the folder where the project is and where we want to write the certificate text file
-path_to_project = Path("D:\LU//22-23\Winter\CMSC140\Final_Project")
+path_to_project = Path("/Users/shobunch/Downloads/CMSC_140/Pufferfish_Personality_Quiz")
 project_dir = path_to_project / "pufferfish_quiz.py"
 out = project_dir / "certificate.txt"
 
