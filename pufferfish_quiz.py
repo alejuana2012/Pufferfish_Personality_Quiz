@@ -331,7 +331,7 @@ questions_list = [
         c. black
         d. purple
         e. blonde
-        f. green''', # I think all natural hair colors should be options. I wanted to choose red :(
+        f. red''', # I think all natural hair colors should be options. I wanted to choose red :(
         '''Question 10: Which one of these adjectives speaks to you?
         a. valiant
         b. purple
